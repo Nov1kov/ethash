@@ -31,6 +31,7 @@ depends = [
 pyethash = Extension('pyethash',
                      sources=sources,
                      depends=depends,
+                     libraries=["Shell32"],
                      extra_compile_args=["-Isrc/", "-std=gnu99", "-Wall"])
 
 setup(
