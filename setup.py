@@ -28,10 +28,13 @@ depends = [
     'src/libethash/sha3.h',
     'src/libethash/util.h',
 ]
+libraries =[]
+if os.name == 'nt':
+    libraries = ["Shell32"]
 pyethash = Extension('pyethash',
                      sources=sources,
                      depends=depends,
-                     libraries=["Shell32"],
+                     libraries=libraries,
                      extra_compile_args=["-Isrc/", "-std=gnu99", "-Wall"])
 
 setup(
