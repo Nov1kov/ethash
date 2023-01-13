@@ -1,8 +1,12 @@
 #define PY_SSIZE_T_CLEAN
 
 #include <Python.h>
+#if defined(_WIN32) || defined(WIN32)
 #include <malloc.h>
-//#include <alloca.h>
+#else
+#include <alloca.h>
+#endif
+
 #include <stdint.h>
 #include <stdlib.h>
 #include <time.h>
