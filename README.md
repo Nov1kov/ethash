@@ -3,6 +3,14 @@
 
 # Ethash
 
+## Fork to fix Windows compatability
+
+Issue: https://github.com/ethereum/ethash/issues/131
+
+```shell
+pip install https://codeload.github.com/Nov1kov/ethash/zip/refs/heads/master
+```
+
 For details on this project, please see the Ethereum wiki:
 https://github.com/ethereum/wiki/wiki/Ethash
 
